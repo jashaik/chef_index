@@ -36,7 +36,7 @@
 -include("chef_solr.hrl").
 
 search_provider() ->
-    envy:get(chef_index, search_provider, solr, envy:one_of([solr, elasticsearch])).
+    envy:get(chef_index, search_provider, solr, envy:one_of([solr, elasticsearc, opensearch])).
 
 -spec search(#chef_solr_query{}) ->
                     {ok, non_neg_integer(), non_neg_integer(), [binary()]} |
